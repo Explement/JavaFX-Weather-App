@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="311.0" style="-fx-background-color: #21222b;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="weather.app.WeatherFetcher">
+   <children>
+      <ImageView fx:id="weatherDisplay" fitHeight="155.0" fitWidth="311.0" layoutX="79.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/hailing_cloud.png" />
+         </image></ImageView>
+      <Label fx:id="temperatureText" alignment="CENTER" layoutY="193.0" prefHeight="17.0" prefWidth="311.0" text="0.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cityTextField" alignment="CENTER" focusTraversable="false" layoutX="68.0" layoutY="341.0" onAction="#enterWeather" prefHeight="39.0" prefWidth="178.0" promptText="Enter A City/Country" style="-fx-background-color: #2f303d; -fx-background-radius: 5;">
+         <font>
+            <Font name="Segoe UI Light" size="16.0" />
+         </font></TextField>
+      <Label fx:id="weatherDescription" alignment="CENTER" layoutX="9.0" layoutY="576.0" prefHeight="17.0" prefWidth="311.0" text="Description" textFill="WHITE" />
+      <Label fx:id="cityText" alignment="CENTER" layoutX="1.0" layoutY="40.0" prefHeight="17.0" prefWidth="311.0" text="Not Found" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="15.0" layoutY="258.0" prefHeight="66.0" prefWidth="134.0" style="-fx-background-color: #2f303d; -fx-background-radius: 5;">
+         <children>
+            <Label layoutX="14.0" layoutY="6.0" text="UV INDEX" textFill="#9e9e9e">
+               <font>
+                  <Font name="Nirmala UI Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="uvIndexText" layoutX="17.0" layoutY="23.0" prefHeight="39.0" prefWidth="117.0" text="0.0" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="27.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="165.0" layoutY="258.0" prefHeight="66.0" prefWidth="134.0" style="-fx-background-color: #2f303d; -fx-background-radius: 5;">
+         <children>
+            <Label layoutX="14.0" layoutY="6.0" text="WIND" textFill="#9e9e9e">
+               <font>
+                  <Font name="Nirmala UI Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="windSpeedText" alignment="CENTER" layoutY="23.0" prefHeight="39.0" prefWidth="134.0" text="0.0 km/h" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

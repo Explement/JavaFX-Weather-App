@@ -1,0 +1,10 @@
+.text-field {
+    -fx-focus-color: rgb(0, 255, 255);
+    -fx-background-color: -fx-text-box-border, -fx-background;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+}
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-background;
+}
